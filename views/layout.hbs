@@ -1,0 +1,19 @@
+{{!-- 部分出门的模板引擎, 例如有: pug / handlerbars ejs --}}
+{{!-- handlebars 使用了mustache语法 --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+</head>
+<body>
+    {{!-- 页头 --}}
+    {{>nav}}
+    {{!-- 所有的子块都放在body里面, 差值 --}}
+    {{{body}}}
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    {{#block 'jquery'}}{{/block}}
+</body>
+</html>
